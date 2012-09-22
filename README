@@ -1,0 +1,118 @@
+# -*- mode: org; coding: utf-8 -*-
+mikutter - simple, powerful and moeful twitter client
+file:core/skin/data/icon.png
+全てのミク廃、そしてTwitter中毒者へ贈る、至高のTwitter Clientを目指すTwitter Client。
+略して至高のTwitter Client。
+
+* 用件
+
+** 必須アプリケーション:
+- ruby (1.9.2)
+- ruby gtk (1.0.0)
+- rcairo (1.10.0)
+- Open SSL
+
+** プラグインが必要とするもの(必須ではない):
+- notify-sendコマンド(ubuntuでは、sudo apt-get install libnotify-bin)
+- aplayコマンド(サウンド通知のため・ubuntuなら最初から入ってる)
+
+** gemで入れるもの(なくてもOKです):
+- httpclient
+
+* OS/ディストリ別インストール方法
+** Ubuntu 12.04でのインストール方法
+   1. aptでインストール
+      1. まず、パッケージをすべて最新にします
+         : $ sudo apt-get update
+         : $ sudo apt-get upgrade
+      2. mikutterに必要なパッケージをインストールします
+         : $ sudo apt-get install ruby1.9.1 ruby-gnome2 libnotify-bin
+   2. バージョンの確認
+      以下のコマンドを実行してください。
+      : $ ruby -v
+      ubuntu 12.04 では、単に apt-get で ruby というパッケージを入れると、 ruby1.8 が入ってしまい、 ruby コマンドでは ruby1.8 が起動してしまいます。
+      そのため、上記コマンドでruby 1.9.3 以前のバージョンが表示されたら、以下のようなコマンドで起動しなければいけません。
+      : $ ruby1.9.1 mikutter.rb
+      [[common settings][共通の設定]]へ
+
+** その他のディストリビューション
+   基本的には、その他のディストリでは、同等のライブラリが配布されていたらそれを使ってください。
+   また、ディストリによってはmikutterが公式リポジトリに含まれていることがあります。
+
+** Mac OS X
+   [[http://sites.google.com/site/yorufukurou/]]
+
+** Windows
+   [[http://janetter.net/jp/]]
+
+** iOS端末(iPhone等)
+   http://tapbots.com/software/tweetbot/
+
+** Android
+   http://shootingstar067.com/
+
+** 共通の設定 # <<common settings>>
+   1. ruby mikutter.rb で起動できます。
+   2. ruby mikutter.rb --debug とすると、人柱気分が味わえます。
+
+** 起動
+   単純に、以下のようなコマンドで実行できます。
+   : ruby mikutter.rb
+
+* ディレクトリ構成
+  - mikutter.rb 本体起動スクリプト
+  - core/ CHIのコアファイル。この下はめんどくさいから説明しません
+  - plugin/ サードパーティー製プラグイン
+  - skin/ スキン
+
+* 生成されるファイルとその意味
+  mikutterが生成するファイルは ~/.mikutter 以下に全て配置されます。
+
+| ファイル名        | 説明                                                     |
+|-------------------+----------------------------------------------------------|
+| cache/            | Twitter APIのレスポンスのキャッシュ。                    |
+| icons/            | アイコンなど、画像のキャッシュ                           |
+| p_store_values.db | 設定やアカウント情報などが保存されるデータベースファイル |
+| logs/             | エラーログなど                                           |
+| tmp/              | 一時ファイル                                             |
+
+各ファイルは、ない場合はすべて自動生成されます。ディスク容量が圧迫されているなど、削除したくなったら適宜削除してもらって構いません
+(ただし、p_store_values.dbは削除するとmikutterのデータが飛びます)。
+というか、一定期間でいらんものは削除するようにします。ほんとすみません。
+
+* リンク
+** mikutter
+   [[http://mikutter.hachune.net/]]
+   ネタで改良されていっている究極のクライアント
+** hachune.net
+   [[http://hachune.net/]]
+   奇跡のドメイン
+** Project みくんちゅ♪
+   [[http://mikunchu.wiki.fc2.com/]]
+   みくかわいいよみく
+
+* ライセンスなど
+** ライセンス
+Copyright (C) 2009-2012 Toshiaki Asai
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョンのうちどれか)が定める条件の下で再頒布または改変することができます。
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。商業可能性の保証や特定目的への適合性は、言外に示されたものも含め、全く存在しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> をご覧ください。
+
+なお、mikutter上で動作するプラグイン及び添付されている外部ライブラリ(core/lib以下の全て)、スキンファイル(core/skin以下の全て)については、このライセンスの適応対象外です。
+
+** 連絡先
+  作者(toshi_a)には、ツイッターのリプライで連絡して下さい。だいたい連絡がつくと思います。
+  また、ハッシュタグ #mikutter に、mikutter関連のことを気軽につぶやいてください。Twitterらしく
+  適当に参考にします。
+
+  @toshi_a [[http://twitter.com/toshi_a]]
+  [[toshi.alternative@gmail.com]]
+
+
+
+

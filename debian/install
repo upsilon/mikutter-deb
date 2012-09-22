@@ -1,0 +1,10 @@
+mikutter.rb usr/lib/mikutter
+core/*.rb usr/lib/mikutter/core
+core/miku usr/lib/mikutter/core
+core/mui usr/lib/mikutter/core
+core/boot usr/lib/mikutter/core
+core/lib usr/lib/mikutter/core
+core/addon usr/lib/mikutter/core
+core/test usr/lib/mikutter/core
+core/plugin usr/lib/mikutter/core
+core/skin usr/share/mikutter

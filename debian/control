@@ -1,0 +1,15 @@
+Source: mikutter
+Section: x11
+Priority: extra
+Maintainer: Kimura Youichi <kim.upsilon@bucyou.net>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: http://mikutter.hachune.net/
+#Vcs-Git: git://git.debian.org/collab-maint/mikutter.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/mikutter.git;a=summary
+
+Package: mikutter
+Architecture: all
+Depends: ${misc:Depends}, ruby, ruby1.9.1 (>= 1.9.2), ruby-gtk2, ruby-bsearch
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

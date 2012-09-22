@@ -1,0 +1,19 @@
+Description: Fix relative symlink for mikutter.rb
+Author: Kimura Youichi <kim.upsilon@bucyou.net>
+
+--- mikutter-0.1.1.863.orig/mikutter.rb
++++ mikutter-0.1.1.863/mikutter.rb
+@@ -13,7 +13,12 @@ You should have received a copy of the G
+ =end
+ 
+ if File.symlink?($0)
+-  Dir.chdir(File.join(File.dirname(File.readlink($0)), 'core'))
++  linkpath = File.readlink($0)
++  if not linkpath =~ %r|^/|
++    dirname = File.dirname($0)
++    linkpath = File.join(dirname, linkpath)
++  end
++  Dir.chdir(File.join(File.dirname(linkpath), 'core'))
+ else
+   Dir.chdir(File.join(File.dirname($0), 'core'))
+ end

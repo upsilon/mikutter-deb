@@ -1,0 +1,27 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: mikutter
+Source: <http://mikutter.hachune.net/develop>
+
+Files: *
+Copyright: 2009 Toshiaki Asai
+License: GPL-3+
+
+Files: core/lib/ruby-bsearch-1.5/*
+Copyright: 2001 Satoru Takabayashi <satoru@namazu.org>
+License: Ruby
+
+Files: core/lib/addressable/*
+Copyright: 2006 Bob Aman
+License: Apache-2.0
+
+Files: core/lib/escape.rb
+Copyright: 2006 Tanaka Akira <akr@fsij.org>
+License: BSD-3-clause
+
+Files: core/lib/hmac.rb
+Copyright: 2001 Daiki Ueno <ueno@unixuser.org>
+License: Ruby
+
+Files: debian/*
+Copyright: 2012 Kimura Youichi <kim.upsilon@bucyou.net>
+License: GPL-3+

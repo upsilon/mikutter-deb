@@ -1,0 +1,3 @@
+version=3
+
+http://mikutter.hachune.net/download .*/mikutter.(.*)\.tar\.gz

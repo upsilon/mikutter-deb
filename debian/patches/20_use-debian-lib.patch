@@ -1,0 +1,16 @@
+Description: use debian libraries
+ This patch uses debian's libraries instead of mikutter's ones.
+Author: Koichi Akabe <vbkaisetsu@gmail.com>
+Last-Update: 2012-09-24
+
+--- mikutter-0.1.1.863.orig/core/mui/cairo_inner_tl.rb
++++ mikutter-0.1.1.863/core/mui/cairo_inner_tl.rb
+@@ -1,7 +1,7 @@
+ # -*- coding: utf-8 -*-
+ 
+ miquire :mui, 'timeline'
+-miquire :lib, 'ruby-bsearch-1.5/bsearch'
++require 'bsearch'
+ miquire :lib, 'uithreadonly'
+ require 'gtk2'
+ 

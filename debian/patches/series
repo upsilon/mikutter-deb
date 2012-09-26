@@ -1,1 +1,3 @@
-relative-symlink
+10_relative-symlink.patch
+20_use-debian-lib.patch
+30_remove-unnecessary-shebang.patch

@@ -1,0 +1,12 @@
+Description: remove unnecessary shebangs
+ This patch removes shebang on non-executable script
+Author: Koichi Akabe <vbkaisetsu@gmail.com>
+Last-Update: 2012-09-25
+
+--- mikutter-0.1.1.863.orig/core/lib/piapro.rb
++++ mikutter-0.1.1.863/core/lib/piapro.rb
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env ruby
+ #-*- coding: utf-8 -*-
+ 
+ #

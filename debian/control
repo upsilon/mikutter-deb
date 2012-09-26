@@ -1,6 +1,6 @@
 Source: mikutter
 Section: web
-Priority: optional
+Priority: extra
 Maintainer: Kimura Youichi <kim.upsilon@bucyou.net>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4
